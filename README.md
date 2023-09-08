@@ -7,6 +7,8 @@
 - V srpnu jsem byla převážně v Praze a jezdila jsem na kole. Od 26. do 30. jsem byla v Budapešti s kamarády. Je to nádherné město a moc užili jsme si to. ![Budapešť](https://github.com/gyarab/2023_wa_sz_stamenova/assets/94890233/eb1fd5fe-3cee-428d-a349-2945ce1479ce)
 
 ### Časové rozvržení mých prázdnin
+| Doba | Místo |
+| -------- | ------- |
 | 1. - 4.7 | Český ráj |
 | 5. - 9.7 | Praha |
 | 9. - 30.7 | Bulharsko |
