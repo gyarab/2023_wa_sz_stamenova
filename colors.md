@@ -10,7 +10,7 @@
 - často spojována s organizacemi, týkající se ekologie, zdraví, bezpečí
 #### Úvaha
 Firma je farmaceutická, takže si zvolila právě tyto barvy jako symbol zdraví, klidu, harmonie, přírody a bezpečí.
-## Moje barvy
+### Moje barvy
 ![png](https://github.com/gyarab/2023_wa_sz_stamenova/assets/94890233/f1b3ba6b-96f6-4f81-b4e1-006f462c33a3)
 ![png](https://github.com/gyarab/2023_wa_sz_stamenova/assets/94890233/84e94cd8-42f5-4148-9c15-dfcdf87bded8)
 ![png](https://github.com/gyarab/2023_wa_sz_stamenova/assets/94890233/e75e0e4a-c631-4342-8936-d8d5c8786470)
