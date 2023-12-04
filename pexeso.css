@@ -1,0 +1,11 @@
+.card{
+    width: 150px;
+    height: 150px;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+}
+.cardRow{
+    display: flex;
+}
