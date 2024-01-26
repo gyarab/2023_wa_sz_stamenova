@@ -10,7 +10,7 @@ const found = [0, 0, 0, 0, 0, 0];
 const exist = [0, 0, 0, 0, 0, 0];
 let all = 0;
 
-let backImg = '<img src="mandala1.jpg" alt="">';
+let backImg = '<img src="img/mandala1.jpg" alt="">';
 
 const imgChanger = ['<img src="img/apple.jpg" alt="">', '<img src="img/banana.jpg" alt="">', '<img src="img/pear.jpg" alt="">',
                     '<img src="img/orange.jpg" alt="">'];
@@ -68,36 +68,61 @@ function call(){
     }
     
 } 
-function clickCard(cardIndex){
-    cards[cardIndex].innerHTML = imgChanger[index[cardIndex]];
-    flipped ++;
-    found[index[cardIndex]]++;
-    before[cardIndex] = 1;
+let flippedCards = [];
+let matchedCards = [];
 
-   if(flipped == 2 && (found[index[cardIndex]] >= 2 || found[index[cardIndex]] == 3)){
-        flipped = 0;
-        cards[cardIndex].removeAttribute("onclick");
-        before[cardIndex] = 0;
-        call();
-    }
-    else if(flipped == 2 && found[index[cardIndex]] == 1){
-        cards[cardIndex].innerHTML = backImg;
-        before[cardIndex] = 0;
-        flipped = 0;
-        found[index[cardIndex]] = 0;
-        call();
-    }else if(flipped == 1 && found[index[cardIndex]] == 2 ){
-        cards[cardIndex].innerHTML = backImg;
-        before[cardIndex] = 0;
-        flipped = 0;
-        found[index[cardIndex]] = 0;
-        call();
-    }else if(flipped == 1 && found[index[cardIndex]] == 3 ){
-        before[cardIndex] = 0;
-        flipped = 0;
-        all++
-    }
-    if(all == 6){
-        document.write("winner ")
+function flipCard(cardIndex) {
+    if (flippedCards.length < 2 && !flippedCards.includes(cardIndex)) {
+        flippedCards.push(cardIndex);
+        cardIndex.innerHTML = cardIndex.dataset.value;
+
+        if (flippedCards.length === 2) {
+            setTimeout(checkMatch, 1000);
+        }
     }
 }
+function checkMatch() {
+    const [card1, card2] = flippedCards;
+
+    if (card1.dataset.value === card2.dataset.value) {
+        matchedCards.push(card1, card2);
+        if (matchedCards.length === document.querySelectorAll('.cardIndex').length) {
+            alert('Gratuluji, vyhráli jste!');
+        }
+    } else {
+        card1.innerHTML = card2.innerHTML = '';
+    }
+
+    flippedCards = [];
+}
+function clickCard(cardIndex){
+  cards[cardIndex].innerHTML = imgChanger[index[cardIndex]];
+  flipped ++;
+  found[index[cardIndex]]++;
+  before[cardIndex] = 1;
+
+ if(flipped == 2 && (found[index[cardIndex]] >= 2 || found[index[cardIndex]] == 3)){
+      flipped = 0;
+      before[cardIndex] = 0;
+      call();
+  }
+  else if(flipped == 2 && found[index[cardIndex]] == 1){
+      cards[cardIndex].innerHTML = backImg;
+      before[cardIndex] = 0;
+      flipped = 0;
+      found[index[cardIndex]] = 0;
+      call();
+  }else if(flipped == 1 && found[index[cardIndex]] == 2 ){
+      cards[cardIndex].innerHTML = backImg;
+      before[cardIndex] = 0;
+      flipped = 0;
+      found[index[cardIndex]] = 0;
+      call();
+  }else if(flipped == 1 && found[index[cardIndex]] == 3 ){
+      before[cardIndex] = 0;
+      flipped = 0;
+      all++
+  }
+  if(all == 4){
+      document.write("winner ")
+  }}
