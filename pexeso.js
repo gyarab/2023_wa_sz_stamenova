@@ -12,8 +12,8 @@ let all = 0;
 
 let backImg = '<img src="mandala1.jpg" alt="">';
 
-const imgChanger = ['<img src="apple.jpg" alt="">', '<img src="banana.jpg" alt="">', '<img src="pear.jpg" alt="">',
-                    '<img src="orange.jpg" alt="">'];
+const imgChanger = ['<img src="img/apple.jpg" alt="">', '<img src="img/banana.jpg" alt="">', '<img src="img/pear.jpg" alt="">',
+                    '<img src="img/orange.jpg" alt="">'];
 const cards = [document.getElementById('card1'), document.getElementById('card2'), document.getElementById('card3'), 
                 document.getElementById('card4'), document.getElementById('card5'), document.getElementById('card6'),
                 document.getElementById('card7'), document.getElementById('card8')];
